@@ -1,0 +1,4 @@
+[submodule "docs/Python_projects/Finesse-Workshop"]
+    path = docs/Python_projects/Finesse-Workshop
+    url = https://github.com/RaedDiab/Finesse-Workshop.git
+
