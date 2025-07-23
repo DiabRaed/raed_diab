@@ -74,4 +74,13 @@
   </nav>
 
 </body>
+
+<footer style="text-align: center; margin-top: 40px;">
+  <p id="last-updated" style="font-size: 0.9em; color: #666;"></p>
+  <script>
+    const lastMod = new Date(document.lastModified);
+    document.getElementById("last-updated").textContent = `Last updated: ${lastMod.toDateString()}`;
+  </script>
+</footer>
+
 </html>
