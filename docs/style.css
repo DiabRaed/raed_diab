@@ -70,7 +70,7 @@ a:hover {
 #three-container {
   width: 100%;
   height: 400px;
-  overflow: hidden;
+  overflow: auto;
   margin-bottom: 30px;
 }
 

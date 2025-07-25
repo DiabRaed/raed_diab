@@ -43,8 +43,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 
+
+  <title>Live Date and Time</title>
+  <style>
+    .top-left-clock {
+      position: absolute; /* Or 'fixed' if you want it to stay in the corner when scrolling */
+      top: 0;
+      left: 0;
+      padding: 10px; /* Add some padding for spacing from the corner */
+      background-color: lightgray; /* Optional: For better visibility */
+      font-family: sans-serif; /* Optional: Make the font more readable */
+      color: #333; /* Optional: Text color */
+      z-index: 1000; /* Optional: Ensure it stays on top of other content */
+    }
+  </style>
+  
 </head>
 <body>
+
+  <p id="liveClock" class="top-left-clock"></p>
+
   <div id="vanta-bg">
 
 
@@ -85,16 +103,43 @@
     el: "#vanta-bg",
     mouseControls: true,
     touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.0,
+    gyroControls: true,
+    minHeight: 20.00,
+    minWidth: 20.00,
+    scale: 1,
     scaleMobile: 1.0,
     color: 0x00aaff,
     backgroundColor: 0xffffff
   });
 </script>
 
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      };
+      // Format date and time separately, then combine or use toLocaleString
+      // const formattedDateTime = now.toLocaleDateString(undefined, options) + ', ' + now.toLocaleTimeString();
+
+      // Using toLocaleString with options is often more convenient
+      const formattedDateTime = now.toLocaleString(undefined, options);
+
+      document.getElementById('liveClock').innerHTML = formattedDateTime;
+    }
+
+    // Call updateClock initially to display the time immediately
+    updateClock();
+
+    // Set an interval to update the clock every second (1000 milliseconds)
+    setInterval(updateClock, 1000);
+  </script>
 
 </body>
 
