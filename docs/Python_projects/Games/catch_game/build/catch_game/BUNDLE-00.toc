@@ -1,3 +1,0 @@
-([('catch_game',
-   '/Users/raeddiab/Documents/Python_projects/Games/dist/catch_game',
-   'EXECUTABLE')],)
