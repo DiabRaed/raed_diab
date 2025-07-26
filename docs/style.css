@@ -24,7 +24,7 @@ a:hover {
 .profile-summary {
   text-align: left;
   margin-top: 20px;
-  color: #222; /* <-- Add this line */
+  color: #d2d1d1; /* <-- Add this line */
 }
 
 .main-nav {
@@ -54,7 +54,7 @@ a:hover {
 .profile-subtitle {
   font-weight: 600;
   font-size: 1rem;
-  color: #444;
+  color: #d2d1d1;
   margin-bottom: 15px;
 }
 
@@ -86,4 +86,15 @@ a:hover {
 #vanta-bg > * {
   position: relative;
   z-index: 1;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
 }

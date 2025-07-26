@@ -39,9 +39,9 @@
   gtag('config', 'YOUR_TRACKING_ID');
 </script> -->
 
-<!-- Three.js and Vanta.js (Globe effect) -->
+<!-- Three.js and Vanta.js (Globe effect)
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script> -->
 
 
   <title>Live Date and Time</title>
@@ -98,7 +98,7 @@
   </nav>
   </div>
 
-<script>
+<!-- <script>
   VANTA.GLOBE({
     el: "#vanta-bg",
     mouseControls: true,
@@ -111,7 +111,7 @@
     color: 0x00aaff,
     backgroundColor: 0xffffff
   });
-</script>
+</script> -->
 
   <script>
     function updateClock() {
@@ -140,6 +140,12 @@
     // Set an interval to update the clock every second (1000 milliseconds)
     setInterval(updateClock, 1000);
   </script>
+
+
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="animations/beam_turn_on.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 </body>
 
