@@ -73,7 +73,7 @@ a:hover {
   overflow: auto;
   margin-bottom: 30px;
 }
-
+/* 
 #vanta-bg {
   min-height: 100vh;
   width: 100%;
@@ -83,7 +83,7 @@ a:hover {
   color: white;
 }
 
-/* #vanta-bg > * {
+#vanta-bg > * {
   position: relative;
   z-index: 1;
 } */
