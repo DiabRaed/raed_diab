@@ -83,18 +83,17 @@ a:hover {
   color: white;
 }
 
-#vanta-bg > * {
+/* #vanta-bg > * {
   position: relative;
   z-index: 1;
-}
+} */
 
 #bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
   z-index: -1;
-  pointer-events: none;
+  object-fit: cover;
 }
