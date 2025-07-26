@@ -113,6 +113,10 @@
   });
 </script> -->
 
+<video autoplay muted loop playsinline id="bg-video">
+  <source src="Animations/RFJAS.mp4" type="video/mp4" />
+</video>
+
 
 <button id="toggle-video" style="
   position: fixed;
@@ -130,10 +134,6 @@
   Pause Background
 </button>
 
-
-<video autoplay muted loop playsinline id="bg-video">
-  <source src="Animations/RFJAS.mp4" type="video/mp4" />
-</video>
 
 
   <script>
@@ -163,6 +163,31 @@
     // Set an interval to update the clock every second (1000 milliseconds)
     setInterval(updateClock, 1000);
   </script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById('bg-video');
+    const toggleBtn = document.getElementById('toggle-video');
+
+    if (!video) {
+      console.error("❌ bg-video not found");
+    }
+    if (!toggleBtn) {
+      console.error("❌ toggle-video button not found");
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        toggleBtn.textContent = 'Pause Background';
+      } else {
+        video.pause();
+        toggleBtn.textContent = 'Play Background';
+      }
+    });
+  });
+</script>
 
 
 </body>
