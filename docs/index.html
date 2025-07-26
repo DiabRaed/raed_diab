@@ -113,9 +113,28 @@
   });
 </script> -->
 
+
+<button id="toggle-video" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+">
+  Pause Background
+</button>
+
+
 <video autoplay muted loop playsinline id="bg-video">
   <source src="Animations/RFJAS.mp4" type="video/mp4" />
 </video>
+
 
   <script>
     function updateClock() {
